@@ -8,14 +8,24 @@
 
 import UIKit
 
+// MARK: - AppDelegate
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - UIKit Property Declarations
+    
     var window: UIWindow?
-
+    
+    // MARK: - Instance Property Declarations
+    
+    private lazy var applicationCoordinator: ApplicationCoordinator? = { [weak self] in
+        return ApplicationCoordinator.init <^> self?.window
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        applicationCoordinator?.start()
         return true
     }
 
