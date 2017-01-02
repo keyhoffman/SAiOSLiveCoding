@@ -28,20 +28,20 @@ final class FlickrPhotoTableViewController: TableViewContoller<FlickrPhotoTableV
         tf.isHidden = true
         tf.delegate = self
         return tf
-        }()
+    }()
     
     lazy var displaySearchTextFieldButton: UIBarButtonItem = { [weak self] in
         let bbi    = FlickrPhotoTableViewControllerStyleSheet.BarButtonItem.displaySearchTextField.barButtonItem
         bbi.target = self
         bbi.action = .displaySearchTextField
         return bbi
-        }()
+    }()
     
     private lazy var refreshController: UIRefreshControl = { [weak self] in
         let rc = FlickrPhotoTableViewControllerStyleSheet.RefreshControl.tableViewTop.refreshControl
         rc.addTarget(self, action: .handleRefresh, for: .valueChanged)
         return rc
-        }()
+    }()
     
     private let didSelectPhoto:        (FlickrPhoto) -> Void
     private let loadPhotosForNextPage: (FlickrPhotoTableViewController, Int) -> Void

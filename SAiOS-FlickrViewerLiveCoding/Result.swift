@@ -10,9 +10,7 @@ import Foundation
 
 // MARK: - Result
 
-public enum Result<T> {
-    public typealias Value = T
-    
+public enum Result<Value> {    
     case value(Value)
     case error(Error)
     
@@ -24,7 +22,7 @@ public enum Result<T> {
 
 public extension Result {
     public init(_ value: Value?, _ error: Error?) {
-        if let value = value { self = .value(value) }
+             if let value = value { self = .value(value) }
         else if let error = error { self = .error(error) }
         else { self = Result.init <| OptionalError.nonExistantValue(ofType: value) }
     }

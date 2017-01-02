@@ -242,11 +242,10 @@
 			isa = PBXGroup;
 			children = (
 				17ED018E1E1A4A6F006959E5 /* Protocols */,
+				17ED01E91E1A7D68006959E5 /* Collections */,
 				17ED01D11E1A58B9006959E5 /* FlickrPhotoMetadata.swift */,
 				17ED01D31E1A58E4006959E5 /* FlickrPhotoComment.swift */,
 				17ED01D51E1A590A006959E5 /* FlickrPhoto.swift */,
-				17ED01D71E1A59BF006959E5 /* FlickrPhotoMetadataCollection.swift */,
-				17ED01D91E1A59D8006959E5 /* FlickrPhotoCommentCollection.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -323,6 +322,15 @@
 				17ED01BD1E1A52A9006959E5 /* Configurable.swift */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		17ED01E91E1A7D68006959E5 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				17ED01D71E1A59BF006959E5 /* FlickrPhotoMetadataCollection.swift */,
+				17ED01D91E1A59D8006959E5 /* FlickrPhotoCommentCollection.swift */,
+			);
+			name = Collections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

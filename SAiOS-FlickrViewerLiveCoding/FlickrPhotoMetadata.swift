@@ -35,7 +35,7 @@ extension FlickrPhotoMetadata {
 
 extension FlickrPhotoMetadata {
     var commentParameter: URLParameters {
-        //        return [FlickrConstants.Parameters.Keys.PhotoCommentCollection.photoID: id]
+//        return [FlickrConstants.Parameters.Keys.PhotoCommentCollection.photoID: id]
         return [FlickrConstants.Parameters.Keys.CommentCollection.photoID: "29466047852"]
     }
     

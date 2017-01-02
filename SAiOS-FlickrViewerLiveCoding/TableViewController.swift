@@ -26,14 +26,14 @@ class TableViewContoller<Cell: UITableViewCell>: UITableViewController where Cel
         l.textAlignment = .center
         l.sizeToFit()
         return l
-        }()
+    }()
     
     lazy var spinner: UIActivityIndicatorView = { [weak self] in
         let s = UIActivityIndicatorView(activityIndicatorStyle: .white)
         s.hidesWhenStopped = true
         s.center = self?.tableView.center ?? .zero
         return s
-        }()
+    }()
     
     
     var data: [DataType] = [] {

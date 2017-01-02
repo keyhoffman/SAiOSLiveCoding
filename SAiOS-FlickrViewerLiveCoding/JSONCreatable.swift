@@ -14,6 +14,8 @@ protocol JSONCreatable: Equatable {
     static func create(from dictionary: JSONDictionary) -> Result<Self>
 }
 
+// MARK: - JSONCreatable Extension
+
 extension JSONCreatable {
     static func JSONObject<A>  (from object: Any) -> A?                { return object as? A }
     static func JSONString     (from object: Any) -> String?           { return object as? String }

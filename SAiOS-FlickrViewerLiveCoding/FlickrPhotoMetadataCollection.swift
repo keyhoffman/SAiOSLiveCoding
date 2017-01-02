@@ -51,9 +51,13 @@ extension FlickrPhotoMetadataCollection {
     static func getPhotosStream(startingAt index: Int = 0, withBlock block: @escaping ResultBlock<FlickrPhoto>) {
         pageNumber(for: index) <^> { pageNumber in
             ¿get <| [FlickrConstants.Parameters.Keys.MetadataCollection.pageNumber: pageNumber]
-                <| { metadataCollectionResults in _ = metadataCollectionResults >>- { metadataCollection in Result.init
-                    <| metadataCollection.elements.map { metadata in metadata.getFlickrPhoto
-                        <| block } } }
+                 <| { metadataCollectionResults in
+                    _ = metadataCollectionResults >>- { metadataCollection in
+                        Result.init <| metadataCollection.elements.map { metadata in metadata.getFlickrPhoto
+                            <| block
+                        }
+                    }
+            }
         }
     }
 }
